@@ -42,7 +42,7 @@ class TrackClient:
 
         for album in artist_albums:
             if sanitize:
-                if len(album['artists']) > 1 or 'live' in album['name'].lower() or 'christmas' in album['name'].lower():
+                if len(album['artists']) > 1 or 'live' in album['name'].lower() or 'christmas' in album['name'].lower() or 'remix' in album['name'].lower():
                     # skip anything with multiple artists, live, christmas - studio albums only
                     continue
             tracks = self.sp.album_tracks(album_id=album['id'])['items']

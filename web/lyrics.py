@@ -1,0 +1,1 @@
+# TODO: lyric join by track, ML sentiment analysis algorithm and then link to common emotions

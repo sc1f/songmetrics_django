@@ -17,7 +17,6 @@ class Album(models.Model):
     def __str__(self):
         return self.name
 
-
 class Track(models.Model):
     # A single track, pulled from Spotify
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
@@ -28,7 +27,7 @@ class Track(models.Model):
     external_url = models.URLField()
     track_number = models.IntegerField()
     duration = models.BigIntegerField()
-    type = models.CharField()
+    type = models.CharField(max_length=255)
     explicit = models.BooleanField()
     # begin audio features
     danceability = models.FloatField()
